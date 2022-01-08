@@ -99,13 +99,12 @@
 		ADF64CAC278A2D3200242C09 /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
-				ADF64CAD278A2D3200242C09 /* AppDelegate.swift */,
-				ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */,
-				ADF64CB1278A2D3200242C09 /* ViewController.swift */,
-				ADF64CB3278A2D3200242C09 /* Main.storyboard */,
 				ADF64CB6278A2D3300242C09 /* Assets.xcassets */,
-				ADF64CB8278A2D3400242C09 /* LaunchScreen.storyboard */,
 				ADF64CBB278A2D3400242C09 /* Info.plist */,
+				ADF64CEF278A2EC200242C09 /* Supporting Files */,
+				ADF64CEB278A2E8F00242C09 /* Model */,
+				ADF64CEA278A2E8800242C09 /* View */,
+				ADF64CE6278A2E5F00242C09 /* Controller */,
 			);
 			path = Wordle;
 			sourceTree = "<group>";
@@ -126,6 +125,39 @@
 				ADF64CD1278A2D3400242C09 /* Info.plist */,
 			);
 			path = WordleUITests;
+			sourceTree = "<group>";
+		};
+		ADF64CE6278A2E5F00242C09 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADF64CB1278A2D3200242C09 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ADF64CEA278A2E8800242C09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADF64CB3278A2D3200242C09 /* Main.storyboard */,
+				ADF64CB8278A2D3400242C09 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADF64CEB278A2E8F00242C09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADF64CEF278A2EC200242C09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADF64CAD278A2D3200242C09 /* AppDelegate.swift */,
+				ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yijunshao.Wordle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yijunshao.Wordle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
