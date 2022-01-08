@@ -1,3 +1,3 @@
 # wordy-game
 Word game for iOS
-By Angelina Shao and Priyank Aranke
+By Yijun Shao and Priyank Aranke
