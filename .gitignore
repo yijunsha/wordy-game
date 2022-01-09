@@ -27,6 +27,8 @@ DerivedData/
 /*.gcno
 
 ### Xcode Patch ###
+Wordle/Wordle.xcodeproj/project.xcworkspace/xcuserdata/priyank.xcuserdatad/UserInterfaceState.xcuserstate
+
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/

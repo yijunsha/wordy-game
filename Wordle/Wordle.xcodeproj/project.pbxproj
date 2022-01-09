@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990C59A5278A8F1900D7D60A /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C59A4278A8F1900D7D60A /* Dictionary.swift */; };
 		ADF64CAE278A2D3200242C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CAD278A2D3200242C09 /* AppDelegate.swift */; };
 		ADF64CB0278A2D3200242C09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */; };
 		ADF64CB2278A2D3200242C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CB1278A2D3200242C09 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990C59A4278A8F1900D7D60A /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		ADF64CAA278A2D3200242C09 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF64CAD278A2D3200242C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		ADF64CEB278A2E8F00242C09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				990C59A4278A8F1900D7D60A /* Dictionary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF64CB2278A2D3200242C09 /* ViewController.swift in Sources */,
+				990C59A5278A8F1900D7D60A /* Dictionary.swift in Sources */,
 				ADF64CAE278A2D3200242C09 /* AppDelegate.swift in Sources */,
 				ADF64CB0278A2D3200242C09 /* SceneDelegate.swift in Sources */,
 			);
