@@ -7,14 +7,22 @@
 
 import UIKit
 
-let BORDER_COLOR = UIColor(red: 58.0/255.0, green: 58.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor
 let BORDER_WIDTH = CGFloat(1.0)
 let LETTER_RADIUS = CGFloat(5.0)
 
+let BG_DARK_GREY = UIColor(red: 18.0/255.0, green: 18.0/255.0, blue: 19.0/255.0, alpha: 1.0)
+let GREY = UIColor(red: 58.0/255.0, green: 58.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+let GREEN = UIColor(red: 83.0/255.0, green: 141.0/255.0, blue: 78.0/255.0, alpha: 1.0)
+let YELLOW = UIColor(red: 181.0/255.0, green: 159.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+
+
 class ViewController: UIViewController {
+    
+    static let secretWord = SecretWordStore()
 
     @IBOutlet weak var ParentStackView: UIStackView!
     @IBOutlet weak var KeyboardStackView: UIStackView!
+    @IBOutlet weak var NextButton: UIButton!
     
     var guessAttempt = 0
     var wordIndex = 0
@@ -37,12 +45,14 @@ class ViewController: UIViewController {
             }
         }
         
+        NextButton.isHidden = true
     }
     
     func initializeLabel(_ label: UILabel) {
         label.text = ""
         label.layer.borderWidth = BORDER_WIDTH
-        label.layer.borderColor = BORDER_COLOR
+        label.layer.borderColor = GREY.cgColor
+        label.backgroundColor = BG_DARK_GREY
     }
     
     @IBAction func UserDidTapLetter(_ sender: Any) {
@@ -107,13 +117,12 @@ class ViewController: UIViewController {
         case 28:
             deletePressed()
         default:
-            print("Unknown")
             return
         }
     }
     
     func checkValid(_ letter: String) {
-        if wordIndex > 4 {
+        if wordIndex > 4 || guessAttempt >= 6 {
             return
         }
         else {
@@ -130,10 +139,25 @@ class ViewController: UIViewController {
     
     func enterPressed() {
         if wordIndex > 4 {
-            if guessAttempt >= 6 {
+            let word = getWord()
+            if !ViewController.secretWord.isValid(guess: word) {
                 return
             }
-            getWord()
+            let results: Array<Result> = ViewController.secretWord.checkSolution(guess: word)
+            displayResult(results)
+            if guessAttempt >= 5 && (!ViewController.secretWord.isPerfectMatch(guess: word)) {
+                // Display you lost message and the right answer unless its the right word
+                print("You lose!!")
+                NextButton.isHidden = false
+                print(ViewController.secretWord.readSecret())
+                return
+            }
+            
+            if (ViewController.secretWord.isPerfectMatch(guess: word)) {
+                // Display you Won!!! message
+                print("You won!!")
+                NextButton.isHidden = false
+            }
             guessAttempt += 1
             wordIndex = 0
         }
@@ -153,8 +177,43 @@ class ViewController: UIViewController {
             let label = subview as! UILabel
             currentWord.append(label.text ?? "")
         }
-        print(currentWord)
+//        print(currentWord)
         return currentWord
+    }
+    
+    func displayResult(_ results: Array<Result>) {
+        for i in 0...4 {
+            let row = ParentStackView.arrangedSubviews[guessAttempt] as! UIStackView
+            let cell = row.arrangedSubviews[i] as! UILabel
+            cell.backgroundColor = getColor(results[i])
+        }
+    }
+    
+    func getColor(_ result: Result) -> UIColor {
+        switch result {
+        case Result.green: return GREEN
+        case Result.grey: return GREY
+        case Result.yellow: return YELLOW
+        }
+    }
+    
+    func reset() {
+        ViewController.secretWord.reset()
+        
+        for stackview in ParentStackView.arrangedSubviews {
+            let children = stackview as! UIStackView
+            for subview in children.arrangedSubviews {
+                let label = subview as! UILabel
+                initializeLabel(label)
+            }
+        }
+        wordIndex = 0
+        guessAttempt = 0
+        NextButton.isHidden = true
+    }
+    
+    @IBAction func NextButtonClicked(_ sender: UIButton) {
+        reset()
     }
 }
 

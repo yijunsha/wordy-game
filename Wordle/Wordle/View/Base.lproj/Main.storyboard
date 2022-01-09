@@ -796,21 +796,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiQ-av-C4b">
+                                <rect key="frame" x="90" y="557" width="234" height="45"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="NextButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cA9-4H-2Ij"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.070616178210000005" green="0.070517189800000005" blue="0.07451050729" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hiQ-av-C4b" secondAttribute="trailing" constant="90" id="7sW-8e-p72"/>
                             <constraint firstItem="2kR-rJ-6VV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="996-Lv-Uhn"/>
+                            <constraint firstItem="hiQ-av-C4b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="GbB-2T-10l"/>
                             <constraint firstItem="VEx-8I-cOp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KgX-33-Qzh"/>
                             <constraint firstItem="qVx-R9-lGm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YoH-34-LCb"/>
                             <constraint firstItem="qVx-R9-lGm" firstAttribute="top" secondItem="VEx-8I-cOp" secondAttribute="bottom" constant="20" id="c7c-a0-oKQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEx-8I-cOp" secondAttribute="trailing" constant="45" id="ieP-Ra-iBa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2kR-rJ-6VV" secondAttribute="bottom" constant="40" id="rXF-aW-vh0"/>
+                            <constraint firstItem="hiQ-av-C4b" firstAttribute="top" secondItem="qVx-R9-lGm" secondAttribute="bottom" constant="89.5" id="rdx-56-bTb"/>
                             <constraint firstItem="VEx-8I-cOp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="t4V-0Z-Tz8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="KeyboardStackView" destination="2kR-rJ-6VV" id="qCs-Ai-a3U"/>
+                        <outlet property="NextButton" destination="hiQ-av-C4b" id="8Gr-Bt-dg8"/>
                         <outlet property="ParentStackView" destination="qVx-R9-lGm" id="Y6a-fD-uQh"/>
                     </connections>
                 </viewController>

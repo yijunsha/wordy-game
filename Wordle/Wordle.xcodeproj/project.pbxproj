@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		990C59A5278A8F1900D7D60A /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990C59A4278A8F1900D7D60A /* Dictionary.swift */; };
+		AD5FD415278AC1C80078FAB6 /* SecretWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5FD414278AC1C80078FAB6 /* SecretWord.swift */; };
 		ADF64CAE278A2D3200242C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CAD278A2D3200242C09 /* AppDelegate.swift */; };
 		ADF64CB0278A2D3200242C09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */; };
 		ADF64CB2278A2D3200242C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF64CB1278A2D3200242C09 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		990C59A4278A8F1900D7D60A /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		AD5FD414278AC1C80078FAB6 /* SecretWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretWord.swift; sourceTree = "<group>"; };
 		ADF64CAA278A2D3200242C09 /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF64CAD278A2D3200242C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF64CAF278A2D3200242C09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				990C59A4278A8F1900D7D60A /* Dictionary.swift */,
+				AD5FD414278AC1C80078FAB6 /* SecretWord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				990C59A5278A8F1900D7D60A /* Dictionary.swift in Sources */,
 				ADF64CAE278A2D3200242C09 /* AppDelegate.swift in Sources */,
 				ADF64CB0278A2D3200242C09 /* SceneDelegate.swift in Sources */,
+				AD5FD415278AC1C80078FAB6 /* SecretWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ class Dictionary : NSObject {
         }
     }
     
-    func isValid(guess: String) -> Bool {
+    func isValid(_ guess: String) -> Bool {
         return words.contains(guess)
     }
     
